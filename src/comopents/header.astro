@@ -1,0 +1,73 @@
+---
+const { color } = Astro.props;
+import { useUserAgent } from "astro-useragent";
+const uaString = Astro.request.headers.get("user-agent");
+const { source, isMobile } = useUserAgent(uaString);
+let mode = "";
+if(color === "#141722"){
+ mode = "navbar-dark" 
+}
+---
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rehan Shah</title>
+    <script is:inline src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/global.css" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+  <body style =`background-color: ${color}`>
+
+    <script is:inline>
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  let redirect = false;
+  var pathname = window.location.pathname; // Returns path only (/path/example.html)
+  if(pathname === "/Essay" || pathname === "/" || pathname === "/project"){
+    redirect = true
+  }
+if(isMobile && redirect) {
+jQuery(function ($) {
+ $("head").append(`<meta http-equiv=refresh content=0;url=/mobile${pathname}>`);
+});
+  }
+    </script>
+    <nav class=`navbar navbar-expand-lg  navbar-collapse ${mode}`>
+      <div class="container-fluid">
+    <a class="navbar-brand"><b>Rehan Shah</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class=" navbar-collapse justify-content-end collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"href="/" >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/Essay">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/project">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/Resume">Resume</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" href="mailto:Rehansnehalshah1@gmail.com?subject=Hey , built for me&body=// please write an query or request you found have for me to built your software product">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<script is:inline src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <div class="container">
+    <script is:inline>
+      window.onload = function() {
+        var body = document.querySelector('body');
+        body.style.transition = 'opacity 0.25s';
+        body.style.opacity = 1;
+      }
+      </script>

@@ -1,0 +1,77 @@
+---
+import "../../../public/css/stylesM.css"
+import MobileHeader from "../../comopents/mobileHeader.astro"
+import MobileFooter from "../../comopents/mobileFooter.astro";
+---
+<MobileHeader />
+<body>
+  <div class="hero" style="height: 210vh;">
+    <div  class="x"style="height: 40%;">
+      <img class=" Pimg"  id="scrotase_img"src="/scrotase 1.png"></img>
+      <img class="Pimg" id="adam_smith_img" src="/Adam_Smith.png"></img>
+      <div class="home_text">
+        <h2 style="margin-top: -10px;padding-bottom: 20px;">Welcome to my website , I am a </h2>
+        <h1 style="margin-top: -10px;margin-bottom: -20px;" class="">
+          Website Designer, 
+          <br> Intellectual dumby,<br>
+            Academic</h1>
+        <img src="/css/safaribg.png" style="
+          position: relative;
+          top: -900px;
+          z-index: -1;
+          ">
+        <img src="/css/safaribg.png" style="
+          position: relative;
+          top: -1120px;
+          z-index: -1;
+          ">
+      </div>
+    </div>
+
+    <div class="scroll">
+      <h3>Scroll right to see more </h3>
+      <img class="main" src="/Project/Main.jpg"></img>
+      <a href="/project"><img  class="LearnMore_btn"src="/Learn More btn.svg"/></a>
+      <a href="/Essay"><img  class="LearnMore_btn"src="/Learn More btn.svg"/ style="
+        left: 650px;
+        top: -350px;
+        "></a>
+      <a href="/Resume"><img  class="LearnMore_btn"src="/Learn More btn.svg"/ style="
+        bottom:450px;
+        left: 1660px;
+        "></a></div>
+  </div>
+  <script>
+  //Parallax effect 
+  let Pimgs = [];
+  let c =0; 
+  for (let i = 0; i < $(".Pimg").length; i++) {
+    Pimgs.push(  $(".Pimg")[i].id)
+  }          
+
+  $(window).scroll(function() {
+    for (let i = 0; i <Pimgs.length; i++) {
+      let c = 180 
+      if (Pimgs[i] == "adam_smith_img"){
+        c = 680;
+      } ;
+      var y = -Math.abs(this.scrollY);
+      var scale_factor = 0.3
+      $("#"+Pimgs[i]).css('top',scale_factor*y+c);
+    }
+  })
+
+  //Hover Img button 
+
+
+  $(".LearnMore_btn").on("click", function() {
+    $(this).attr("src", "/LearnMoreBtnH.svg");
+    setTimeout(() => {
+      $(this).attr("src", "/Learn More btn.svg");
+    }, 1000);
+  });
+
+</script>
+  <MobileFooter margin="-50vh"/>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</body>

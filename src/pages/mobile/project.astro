@@ -1,0 +1,78 @@
+---
+import "../../../public/css/stylesM.css"
+import MobileFooter from "../../comopents/mobileFooter.astro";
+import MobileHeader from "../../comopents/mobileHeader.astro";
+
+let links = [{
+    title:"shift or not",
+    paragraph : "this website checks multiple factors, such as hdi (human development index) and cost of living, to determine whether you should move to a new location or not.",
+    url: "https://rehan-shah.github.io/calc/",
+    src:""
+ },{
+  title:"Habbit tracker",
+  paragraph:"i created this habit tracker app to help with organization. while the web app is currently being run by another party, i have provided a preview of the app for your reference.",
+  url:"https://habbit-tacker.vercel.app/",
+  src:"../../../public/Screenshot 2022-12-26 at 8.53.43 AM.png"
+ },{ 
+   title:"black jack game", 
+   paragraph : "i designed a minimalist and colorful version of the classic game of blackjack.", 
+   url: "https://black-jack-smoky.vercel.app/",
+   src:""
+ }];
+
+ links.forEach((link) => {
+  if(link.src === ""){
+        var img = "http://s.wordpress.com/mshots/v1/" + encodeURIComponent(link.url) + "?w=400";
+         link.src = img;}
+ })
+---
+<MobileHeader />
+<div class="project">
+<h1>My projects</h1>
+<p>i am a webdevloper and ios developer . i am capable of making static and dynmaic website . i also able to make serve for the spefic website need in sql and non-sqal fomrat , same can be said for ios app.</p>
+<a href="mailto:rehansnehalshah1@gmail.com?subject=hey , built for me&body=// please write an query or request you found have for me to built your software product
+"><img class="hire_me" src="/Project/Buttin Hire me already.svg" style="width: 40%;
+padding-top: 20px;
+padding-bottom: 20px;" ><img/></a>
+<img class="coin" src="/Project/image 24.svg"><img/>
+<div class="work">
+    {links.map((link) =>( 
+        <a target='_blank' href={link.url}>
+        <div class='word_card'>
+          <img  class="hi" src={link.src}/>
+          <div class="Text" style="background-color: white;">
+          <h3>{link.title}</h3>
+          <p>{link.paragraph}</p>
+          </div>
+        </div></a>
+    ))}
+</div>
+</div>
+
+<img  src="/Project/image 23.svg" class="pillar" style="
+    width: 70%;
+    position: absolute;
+    top:1400px;
+    z-index: -1;
+">
+<script>
+$('.hire_me').click(function() {
+$(this).attr('src', '/Project/Property 1=Hover.svg');
+setTimeout(function() {
+$('.hire_me').attr('src', '/Project/Buttin Hire me already.svg');
+}, 2000);
+}); 
+
+// Parllax effect 
+$(window).scroll(function() {
+  // Get the current scroll position
+  const scrollTop = $(window).scrollTop();
+let c= 200;
+  // Set the top position of the images to be the current scroll position
+  $(".pillar").css('top', 0.3*scrollTop + 1400 + 'px');
+  $(".coin").css('top', -0.8*scrollTop + c + 'px');
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<MobileFooter margin="100px"/>
