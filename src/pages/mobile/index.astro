@@ -4,6 +4,7 @@ import MobileHeader from "../../comopents/mobileHeader.astro"
 import MobileFooter from "../../comopents/mobileFooter.astro";
 ---
 <MobileHeader />
+<script is:inline src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <body>
   <div class="hero" style="height: 210vh;">
     <div  class="x"style="height: 40%;">
@@ -41,7 +42,7 @@ import MobileFooter from "../../comopents/mobileFooter.astro";
         left: 1660px;
         "></a></div>
   </div>
-  <script>
+  <script is:inline>
   //Parallax effect 
   let Pimgs = [];
   let c =0; 
@@ -73,5 +74,5 @@ import MobileFooter from "../../comopents/mobileFooter.astro";
 
 </script>
   <MobileFooter margin="-50vh"/>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script is:inline src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 </body>
