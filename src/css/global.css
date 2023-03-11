@@ -48,7 +48,9 @@ body{
     display: flex;
 }
 
-.hero h1{font-weight:1000;
+.hero h1{
+
+    font-weight:700;
   font-size: 6rem; 
     text-align: center;
 
