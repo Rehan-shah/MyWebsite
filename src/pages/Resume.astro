@@ -1,0 +1,19 @@
+---
+import { useUserAgent } from "astro-useragent";
+const uaString = Astro.request.headers.get("user-agent");
+const {isMobile } = useUserAgent(uaString);
+import Footer from "../comopents/footer.astro";
+import Header from "../comopents/header.astro";
+import "../css/global.css";
+let style = "";
+(isMobile && (style = "font-size: 4rem"))
+---
+
+<Header />
+
+<div class="erro" >
+    <h1 style={style}>under construction </h1>
+    <p> come back soon to view the page</p>
+</div>
+
+{(isMobile !== true ) && <Footer margin="40vh" /> }

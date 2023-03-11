@@ -1,0 +1,38 @@
+---
+import "../../css/global.css"
+import Footer from "../../comopents/footer.astro";
+import Header from "../../comopents/header.astro";
+const posts = await Astro.glob('./*.md'); 
+---
+<Header color="#141722"/>
+<div class="Essay">
+<h1>Blog</h1>
+
+  <img class="coin" src="/coin.svg"></img>
+<div class="context">
+    <ul>
+     <li  class="heading">Mathmatical<br> idea</li>
+     {posts.map((item) => {
+       let { frontmatter } = item
+       if(frontmatter.category === "maths")
+       return <a href={item.url}><li class="content">{frontmatter.title}</li></a>
+     })
+      }   
+    </ul>
+    <ul>
+       <li class="heading">Economics and political <br> philosophy</li> 
+     {posts.map((item) => {
+       let { frontmatter } = item
+       if(frontmatter.category === "economics")
+       return <a href={item.url}><li class="content">{frontmatter.title}</li></a>
+     })
+      }   
+    </ul>
+    <ul>
+        <li class="heading">Psycology and <br> neuroscience </li> 
+      </ul>
+</div>
+</div>
+<img style= "margin-left: 115vh" class="Freud" src="/Freud.svg"></img>
+<Footer/>
+

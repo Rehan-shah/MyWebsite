@@ -1,0 +1,87 @@
+
+
+  @font-face {
+    font-family: "SF PRO";
+    src: url(fonts/SF-Pro-Text-Bold.otf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: "SF PRO";
+    src: url(fonts/SF-Pro-Text-SemiBold.otf);
+    font-weight: normal;
+  }
+
+
+  @font-face {
+    font-family: "SF PRO" ;
+    src: url(fonts/SF-Pro-Text-Heavy.otf);
+    font-weight: 800;
+  }
+
+body{
+ font-family: "SF PRO";
+  }
+
+.text h1,h2{
+    opacity: 0.85 ;
+    color: black;
+  }
+
+ .articles {
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+  } 
+
+
+.articles h2{
+  font-size: 1.25rem;
+  color: #141722;
+  opacity: 0.7;
+  font-family: "SF PRO";
+}
+
+.art-tile{
+  font-size: 40pt;
+  color: #141722;
+  opacity: 0.7;
+  margin-bottom: auto;
+  font-family: "SF PRO";
+  font-weight: bold;
+}
+
+.articles p {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.articles h3 {
+  font-size: 14px;
+  color: #141722;
+  opacity: 0.6;
+  padding-top: 2%;
+  padding-bottom: 4%;
+  margin-left: -200px;
+}
+
+
+.articles a:hover {
+  text-decoration: underline;
+}
+
+.articles a {
+  color: #141722 ;
+  opacity: 0.7;
+}
+
+  .text h2,h3,p{
+    opacity: 0.85;
+    color:black;
+  }
+  
+@media only screen and (max-width: 600px) {
+    .articles {
+      width: 80%;
+    }
+}
