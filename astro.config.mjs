@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
-import netlify from '@astrojs/netlify/functions';
-
+import vercelStatic from '@astrojs/vercel/static';
+ 
 export default defineConfig({
   output: 'server',
-  adapter: netlify(),
+  adapter: vercelStatic(),
 });
