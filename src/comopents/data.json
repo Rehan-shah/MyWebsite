@@ -1,0 +1,26 @@
+[
+  {
+    "title": "shift or not",
+    "paragraph": "this website checks multiple factors, such as hdi (human development index) and cost of living, to determine whether you should move to a new location or not.",
+    "url": "https://rehan-shah.github.io/calc/",
+    "src": ""
+  },
+  {
+    "title": "Habbit tracker",
+    "paragraph": "i created this habit tracker app to help with organization. while the web app is currently being run by another party, i have provided a preview of the app for your reference.",
+    "url": "https://habbit-tacker.vercel.app/",
+    "src": "/Screenshot 2022-12-26 at 8.53.43 AM.png"
+  },
+  {
+    "title": "black jack game",
+    "paragraph": "i designed a minimalist and colorful version of the classic game of blackjack.",
+    "url": "https://black-jack-smoky.vercel.app/",
+    "src": ""
+  },
+  {
+    "title": "Emoji twitter",
+    "paragraph": "Imagine twiiter but u can only most emojis , now thats a better hell",
+    "url": "https://emoji-twitter-delta.vercel.app",
+    "src": ""
+  }
+]

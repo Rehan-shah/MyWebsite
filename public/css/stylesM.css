@@ -2,20 +2,20 @@
 
   @font-face {
     font-family: "SF PRO";
-    src: url(fonts/SF-Pro-Text-Bold.otf);
+    src: url("../fonts/SF-Pro-Text-Bold.otf");
     font-weight: bold;
   }
 
   @font-face {
     font-family: "SF PRO";
-    src: url(fonts/SF-Pro-Text-SemiBold.otf);
+    src: url("../fonts/SF-Pro-Text-SemiBold.otf");
     font-weight: normal;
   }
 
 
   @font-face {
     font-family: "SF PRO" ;
-    src: url(./fonts/SF-Pro-Text-Heavy.otf);
+    src: url("../fonts/SF-Pro-Text-Heavy.otf");
     font-weight: 1000;
   }
 
@@ -23,6 +23,7 @@
 
 body{
     background-color: #F1ECE6;
+    overflow-x: hidden;
     margin: 0px;
     padding: 0px;
     opacity: 0%;
@@ -190,18 +191,9 @@ width:85% ;
 .context li {
   list-style-type: none;
   color: #dcd4ce;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
-.context .heading{
-  color:#dcd4ce;
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.Essay .content:hover {
-  text-decoration: underline;
-}
 
 
 
@@ -257,9 +249,6 @@ a {
 
 
 
-.articles a:hover {
-  text-decoration: underline;
-}
 
 .articles a {
   color: #141722 ;
@@ -307,6 +296,8 @@ a {
 }
 
 .scroll {
+  position: relative;
+  z-index: 100;
   overflow-x: scroll;
   margin-left: -60px;
 }
@@ -391,8 +382,8 @@ a {
 
 .footer {
 background-color: #141722;
-z-index: -10;
-overflow-x: clip;
+overflow: hidden;
+height: 45 vh;
 }
 
 .social_media{

@@ -2,66 +2,71 @@
 import Footer from "../comopents/footer.astro";
 import Header from "../comopents/header.astro";
 import "../css/global.css";
+import links from "../comopents/data.json";
 
-let links= [{
-    title:"shift or not",
-    paragraph : "this website checks multiple factors, such as hdi (human development index) and cost of living, to determine whether you should move to a new location or not.",
-    url: "https://rehan-shah.github.io/calc/",
-    src:""
- },{
-  title:"habbit tracker",
-  paragraph:"i created this habit tracker app to help with organization. while the web app is currently being run by another party, i have provided a preview of the app for your reference.",
-  url:"https://habbit-tacker.vercel.app/",
-  src:"/Screenshot 2022-12-26 at 8.53.43 AM.png"
- },{ 
-   title:"black jack game", 
-   paragraph : "i designed a minimalist and colorful version of the classic game of blackjack.", 
-   url: "https://black-jack-smoky.vercel.app/",
-   src:""
- }];
-
- links.forEach((link) => {
-  if(link.src === ""){
-        var img = "http://s.wordpress.com/mshots/v1/" + encodeURIComponent(link.url) + "?w=400";
-         link.src = img;}
- })
+links.forEach((link) => {
+  if (link.src === "") {
+    var img =
+      "http://s.wordpress.com/mshots/v1/" +
+      encodeURIComponent(link.url) +
+      "?w=380";
+    link.src = img;
+  }
+});
 ---
+
 <Header />
 <div class="project">
-
-<h1>My Projects</h1>
-<p>As a web developer and iOS developer, I have the skills to create both static and dynamic websites. I am also able to set up servers for specific website needs in both SQL and non-SQL formats. I am proficient in creating iOS apps as well. </p>
-<a href="mailto:Rehansnehalshah1@gmail.com?subject=Hey , built for me&body=// please write an query or request you found have for me to built your software product
-"><img class="hire_me" src="/Project/Buttin Hire me already.svg" ><img/></a>
-<img class="coin" src="/Project/image 24.svg"><img/>
-<div class="work">
-    {links.map((link) =>( 
+  <h1>My Projects</h1>
+  <p>
+    As a web developer and iOS developer, I have the skills to create both
+    static and dynamic websites. I am also able to set up servers for specific
+    website needs in both SQL and non-SQL formats. I am proficient in creating
+    iOS apps as well.
+  </p>
+  <a
+    href="mailto:Rehansnehalshah1@gmail.com?subject=Hey , built for me&body=// please write an query or request you found have for me to built your software product
+"
+    ><img class="hire_me" src="/Project/Buttin Hire me already.svg" /><img /></a
+  >
+  <img class="coin" src="/Project/image 24.svg" /><img />
+  <div class="work">
+    {
+      links.map((link) => (
         <a href={link.url}>
-        <div class='word_card'>
-          <img  class="hi" src={link.src}/>
-          <div class="Text" style="background-color: white;">
-          <h3>{link.title}</h3>
-          <p>{link.paragraph}</p>
+          <div class="word_card">
+            <img class="hi" src={link.src} />
+            <div class="Text">
+              <h3>{link.title}</h3>
+              <p>{link.paragraph}</p>
+            </div>
           </div>
-        </div></a>
-    ))}
-</div>
-<img style="
+        </a>
+      ))
+    }
+  </div>
+  <img
+    style="
     position: absolute;
     left: 0px;
     top: 255px;
     z-index: -1;
     width: 25%;
-" src="/Project/image 23.svg"/>
-<script>
-  $('.hire_me').hover(function() {
-  $(this).attr('src', '/Project/Property 1=Hover.svg');
-}, function() {
-  $(this).attr('src', '/Project/Buttin Hire me already.svg');
-});
-</script>
+"
+    src="/Project/image 23.svg"
+  />
+  <script>
+    $(".hire_me").hover(
+      function () {
+        $(this).attr("src", "/Project/Property 1=Hover.svg");
+      },
+      function () {
+        $(this).attr("src", "/Project/Buttin Hire me already.svg");
+      }
+    );
+  </script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-</div >  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</div>
 
-<Footer margin={"35vh"}/>
+<Footer margin={"35vh"} />

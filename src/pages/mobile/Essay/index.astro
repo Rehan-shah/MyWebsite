@@ -1,52 +1,84 @@
 ---
-import "../../../../public/css/stylesM.css"
+import "../../../../public/css/stylesM.css";
 import MobileFooter from "../../../comopents/mobileFooter.astro";
 import MobileHeader from "../../../comopents/mobileHeader.astro";
-const posts = await Astro.glob('../../Essay/*.md'); 
+const posts = await Astro.glob("../../Essay/*.md");
 ---
-<MobileHeader color="#141722"/>
-<img class="coin" src="/coin.svg"></img>
+
+<MobileHeader color="#141722" />
+
 <div class="context">
-    <h1 style="font-weight:bold">Blog</h1>
-    <ul>
-     <li  class="heading">Mathmatica idea</li>
-     {posts.map((item) => {
-       let { frontmatter } = item
-       if(frontmatter.category === "maths")
-       return <a href={item.url}><li class="content">{frontmatter.title}</li></a>
-     })
-      }   
-    </ul>
-    <ul>
-       <li class="heading">Economics and political philosophy</li> 
-     {posts.map((item) => {
-       let { frontmatter } = item
-       if(frontmatter.category === "economics")
-       return <a href={item.url}><li class="content">{frontmatter.title}</li></a>
-     })
-      }   
-    </ul>
-    <ul>
-        <li class="heading">Psycology and neuroscience </li> 
-      </ul>
+  <img class="coin" src="/coin.svg" />
+  <h1 style="font-weight:1000">Blog</h1>
+  <ul>
+    <li style="  color:#dcd4ce;
+     font-size: 3.5rem;
+     font-weight: bold;">
+      Mathmatica idea
+    </li>
+    {
+      posts.map((item) => {
+        let { frontmatter } = item;
+        if (frontmatter.category === "maths")
+          return (
+            <a href={item.url}>
+              <li class="content">{frontmatter.title}</li>
+            </a>
+          );
+      })
+    }
+  </ul>
+  <ul>
+    <li
+      class="heading"
+      style="  color:#dcd4ce;
+       font-size: 3.5rem;
+       font-weight: bold;"
+    >
+      Economics and political philosophy
+    </li>
+    {
+      posts.map((item) => {
+        let { frontmatter } = item;
+        if (frontmatter.category === "economics")
+          return (
+            <a href={item.url}>
+              <li class="content">{frontmatter.title}</li>
+            </a>
+          );
+      })
+    }
+  </ul>
+  <ul>
+    <li
+      class="heading"
+      style="  color:#dcd4ce;
+        font-size:3.5rem;
+        font-weight: bold;"
+    >
+      Psycology and neuroscience
+    </li>
+  </ul>
+
+  <img class="freud" src="/Freud.svg" /><img />
 </div>
-<img class="freud" src="/Freud.svg"><img>
 <script is:inline>
 // get the image elements
-const coin = document.querySelector('.coin');
-const freud = document.querySelector('.freud');
+const coin = document.querySelector(".coin");
+const freud = document.querySelector(".freud");
 let x = 1000;
 let c = 200;
 
 // add an event listener to listen for scroll events
-window.addEventListener('scroll', function() {
-// get the current scroll position
-const scrollTop = window.scrollY;
+window.addEventListener("scroll", function () {
+  // get the current scroll position
+  const scrollTop = window.scrollY;
 
-// set the top position of the images to be the current scroll position
-coin.style.top = -0.8 * scrollTop + c + 'px';
-freud.style.top = 0.8 * scrollTop + x + 'px';
+  // set the top position of the images to be the current scroll position
+  coin.style.top = -0.8 * scrollTop + c + "px";
+  freud.style.top = 0.8 * scrollTop + x + "px";
 });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<MobileFooter margin="35vh"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+></script>
+<MobileFooter margin="35vh" />
