@@ -1,23 +1,22 @@
 
+@font-face {
+  font-family: "SF PRO";
+  src: url('/public/fonts/SF-Pro-Text-Bold.otf');
+  font-weight: bold;
+}
 
-  @font-face {
-    font-family: "SF PRO";
-    src: url(fonts/SF-Pro-Text-Bold.otf);
-    font-weight: bold;
-  }
-
-  @font-face {
-    font-family: "SF PRO";
-    src: url(fonts/SF-Pro-Text-SemiBold.otf);
-    font-weight: normal;
-  }
+@font-face {
+  font-family: "SF PRO";
+  src: url('/public/fonts/SF-Pro-Text-SemiBold.otf');
+  font-weight: normal;
+}
 
 
-  @font-face {
-    font-family: "SF PRO" ;
-    src: url(fonts/SF-Pro-Text-Heavy.otf);
-    font-weight: 800;
-  }
+@font-face {
+  font-family: "SF PRO" ;
+  src: url('/public//public/fonts/SF-Pro-Text-Heavy.otf');
+  font-weight: 1000;
+}
 
 body{
  font-family: "SF PRO";
