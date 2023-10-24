@@ -1,18 +1,20 @@
 ---
-import "./../css/blog.css"
-const {frontmatter} = Astro.props;
+import "./../css/blog.css";
+const { frontmatter } = Astro.props;
 ---
 
 <html>
   <head>
-    <link rel="stylesheet" href="/css/blog.css" /> 
+    <link rel="stylesheet" href="/css/blog.css" />
+    <title>{frontmatter.title}</title>
   </head>
-<div class="articles">
+  <div class="articles">
     <div>
-  <h1 class="art-tile">{frontmatter.title}</h1>
-  <h2>Author : Rehan Shah</h2>
+      <h1 class="art-tile">{frontmatter.title}</h1>
+      <h2>Author : Rehan Shah</h2>
     </div>
-  <div style="padding: 10px;"></div>
-    <div class="text"> <slot /> </div>
-</div>
+    <div style="padding: 10px;"></div>
+    <div class="text"><slot /></div>
+  </div>
+
 </html>
